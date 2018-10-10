@@ -41,8 +41,19 @@ var ostur = document.querySelector("#ostur");
 	ostur.style.height = "100px";
 	ostur.style.width = "200px";
 
-
 /* -------------If -Else 1------------- */
+var wrapper = document.querySelector("#wrapper");
+wrapper.onclick = function(e){
+	if (wrapper.style.backgroundColor === 'yellow')
+	{
+		wrapper.style.backgroundColor = 'white';
+	}
+	else
+	{
+		wrapper.style.backgroundColor = 'yellow';
+	}
+}
+
 var secondLeft = 0;
 var goLeft = function(e){
 	console.log(e.key);
