@@ -13,8 +13,19 @@ mouse.onmouseover = function(e){
 mouse.onmouseleave = function(e){
 	mouse.style.backgroundImage = "";
 }
+var bubbleImage = '';
+
 bubble.onclick = function(e){
-	bubble.style.backgroundImage = "url(img/tist.png)";
+	if (bubbleImage === "tist")
+	{
+		bubble.style.backgroundImage = "url(img/egvilost.png)";
+		bubbleImage = 'egvilost';
+	}
+	else
+	{
+		bubble.style.backgroundImage = "url(img/tist.png)";
+		bubbleImage = 'tist';
+	}
 	bubble.style.backgroundSize = "100px 100px";
 	bubble.style.backgroundRepeat = "no-repeat";
 	bubble.style.height = "100px";
