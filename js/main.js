@@ -1,4 +1,4 @@
-/* -------------Events 0 ------------ */
+/* -------------Events 1 ------------ */
 var mouse = document.querySelector("#mouse");
 console.log(mouse.innerHTML);
 
@@ -30,13 +30,25 @@ var ostur = document.querySelector("#ostur");
 	ostur.style.height = "100px";
 	ostur.style.width = "200px";
 
-/* -------------færa kassa með takka------------- */
+
+/* -------------If -Else 1------------- */
 var secondLeft = 0;
 var goLeft = function(e){
 	console.log(e.key);
-	if(e.key==="ArrowRight"){ //nota if
-	secondLeft = secondLeft + 10;
-	ostur.style.marginLeft = secondLeft+"px";
+	if(e.key==="ArrowRight"){ //key er event property
+		if(e.ctrlKey) {//key er event property
+		secondLeft = secondLeft + 70;
+		ostur.style.marginLeft = secondLeft+"px";	
+		}
+		else{
+		secondLeft = secondLeft + 10;
+		ostur.style.marginLeft = secondLeft+"px";
+		}
+
+	}
+	else if (e.key==="ArrowLeft"){//annars ef
+		secondLeft = secondLeft - 10;
+		ostur.style.marginLeft = secondLeft+"px";
 	}
 }
 document.onkeydown = goLeft;
@@ -49,5 +61,5 @@ var mus = hallo("Max", 10);
 console.log(mus);
 
 
-/* -------------If -Else 3------------- */
+
 
