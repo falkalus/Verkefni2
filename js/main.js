@@ -53,9 +53,6 @@ wrapper.onkeydown = function(e){
 	}
 }
 
-var wrapper = document.querySelector('#wrapper');
-
-
 var secondLeft = 0;
 var goLeft = function(e){
 	console.log(e.key);
@@ -74,7 +71,10 @@ var goLeft = function(e){
 		secondLeft = secondLeft - 10;
 		ostur.style.marginLeft = secondLeft+"px";
 	}
-	wrapper.width=wrapper.width;
+	if(parseInt(ostur.style.marginLeft) > 600){
+		alert("MARK !");
+		ostur.style.display = "none";
+	}
 }
 document.onkeydown = goLeft;
 
@@ -86,10 +86,16 @@ var mus = hallo("Max", 10);
 console.log(mus);
 
 var ahugamal = function(matur, aftreying){
-	return "uppáhaldsmaturinn minn er " + matur + " og mér finnst gaman að " + aftreying;
+	return " uppáhaldsmaturinn minn er " + matur + " og mér finnst gaman að " + aftreying;
 }
 var skemmtilegt = ahugamal("ostur", "naga spýtur");
 console.log(skemmtilegt)
+
+var button = document.querySelector("#button");
+button.onclick = function(e){
+	alert(mus + skemmtilegt);
+}
+
 
 
 

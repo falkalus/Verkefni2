@@ -9,6 +9,7 @@ header {
 	justify-content: center;
 	border: 3px solid black;
 	border-right: 6px dashed red;
+	padding: 10px 0;
 
 }
 #mouse,
@@ -18,4 +19,14 @@ header {
 .musin {
 	padding: 10px 0;
 }
-
+#button {
+	background-color: orange;
+	padding: 10px 0;
+	width: 40%;
+	margin: 0 auto;
+	border: none;
+	border-radius: 10px;
+}
+#button:hover {
+	background-color: gray;
+}
