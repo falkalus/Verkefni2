@@ -1,4 +1,4 @@
-/* -------------Events 1 ------------ */
+/* -------------Events ------------ */
 var mouse = document.querySelector("#mouse");
 console.log(mouse.innerHTML);
 
@@ -42,21 +42,28 @@ var ostur = document.querySelector("#ostur");
 /* -------------If -Else ------------- */
 
 var wrapper = document.querySelector("#wrapper");
-wrapper.onkeydown = function(e){
-	if (wrapper.style.backgroundColor === 'yellow')
+wrapper.ondblclick = function(e){
+	var clickCount = e.detail;
+	console.log (e.detail);//key er event property
+	if (wrapper.style.backgroundColor === 'moccasin')
 	{
 		wrapper.style.backgroundColor = 'white';
 	}
 	else
 	{
-		wrapper.style.backgroundColor = 'yellow';
+		wrapper.style.backgroundColor = 'moccasin';
 	}
+	
 }
 
 var secondLeft = 0;
 var goLeft = function(e){
-	console.log(e.key);
+	console.log(e.key);//til að sjá hvað það er
 	if(e.key==="ArrowRight"){ //key er event property
+	
+	var code = e.code;
+	console.log(e.code);//key er event property
+
 		if(e.ctrlKey) {//key er event property
 		secondLeft = secondLeft + 100;
 		ostur.style.marginLeft = secondLeft+"px";	
@@ -73,8 +80,9 @@ var goLeft = function(e){
 	}
 	if(parseInt(ostur.style.marginLeft) > 600){
 		alert("MARK !");
-		ostur.style.display = "none";
+		ostur.style.display = "none";	
 	}
+
 }
 document.onkeydown = goLeft;
 
@@ -94,6 +102,7 @@ console.log(skemmtilegt)
 var button = document.querySelector("#button");
 button.onclick = function(e){
 	alert(mus + skemmtilegt);
+	console.log (e.pageX);//key er event property
 }
 
 

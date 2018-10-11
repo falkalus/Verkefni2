@@ -10,6 +10,7 @@ header {
 	border: 3px solid black;
 	border-right: 6px dashed red;
 	padding: 10px 0;
+	padding-left: 20px;
 
 }
 #mouse,
