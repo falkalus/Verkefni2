@@ -6,9 +6,8 @@ mouse.onmouseover = function(e){
 	mouse.style.backgroundImage = "url(img/mouse.png)";
 	mouse.style.backgroundSize = "100px 100px";
 	mouse.style.backgroundRepeat = "no-repeat";
-	mouse.style.height = "120px";
-	mouse.style.width = "200px";
-	mouse.style.paddingLeft = "100px";
+	mouse.style.height = "100px";
+	mouse.style.width = "100px";
 }
 mouse.onmouseleave = function(e){
 	mouse.style.backgroundImage = "";
@@ -29,21 +28,21 @@ bubble.onclick = function(e){
 	bubble.style.backgroundSize = "100px 100px";
 	bubble.style.backgroundRepeat = "no-repeat";
 	bubble.style.height = "100px";
-	bubble.style.width = "200px";
-	bubble.style.paddingLeft = "100px";
+	bubble.style.width = "100px";
 }
 
-/* -------------ostur í mark------------- */
+/* -------------ostur------------- */
 var ostur = document.querySelector("#ostur");
 	ostur.style.backgroundImage = "url(img/ostur.png)";
 	ostur.style.backgroundSize = "100px 100px";
 	ostur.style.backgroundRepeat = "no-repeat";
 	ostur.style.height = "100px";
-	ostur.style.width = "200px";
+	ostur.style.width = "100px";
 
-/* -------------If -Else 1------------- */
+/* -------------If -Else ------------- */
+
 var wrapper = document.querySelector("#wrapper");
-wrapper.onclick = function(e){
+wrapper.onkeydown = function(e){
 	if (wrapper.style.backgroundColor === 'yellow')
 	{
 		wrapper.style.backgroundColor = 'white';
@@ -54,12 +53,15 @@ wrapper.onclick = function(e){
 	}
 }
 
+var wrapper = document.querySelector('#wrapper');
+
+
 var secondLeft = 0;
 var goLeft = function(e){
 	console.log(e.key);
 	if(e.key==="ArrowRight"){ //key er event property
 		if(e.ctrlKey) {//key er event property
-		secondLeft = secondLeft + 70;
+		secondLeft = secondLeft + 100;
 		ostur.style.marginLeft = secondLeft+"px";	
 		}
 		else{
@@ -72,6 +74,7 @@ var goLeft = function(e){
 		secondLeft = secondLeft - 10;
 		ostur.style.marginLeft = secondLeft+"px";
 	}
+	wrapper.width=wrapper.width;
 }
 document.onkeydown = goLeft;
 
