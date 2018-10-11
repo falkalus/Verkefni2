@@ -85,6 +85,12 @@ var hallo = function(nafn, aldur){
 var mus = hallo("Max", 10);
 console.log(mus);
 
+var ahugamal = function(matur, aftreying){
+	return "uppáhaldsmaturinn minn er " + matur + " og mér finnst gaman að " + aftreying;
+}
+var skemmtilegt = ahugamal("ostur", "naga spýtur");
+console.log(skemmtilegt)
+
 
 
 
